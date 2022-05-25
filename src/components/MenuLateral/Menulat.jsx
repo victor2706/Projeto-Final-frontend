@@ -47,7 +47,10 @@ const MenuLat = () => {
           </li>
         </ul>
       </div>
-      <div className="bottom">opcões de cores</div>
+      <div className="bottom">
+        <div className='opcaodecores'></div>
+        <div className='opcaodecores'></div>
+      </div>
     </div>
   )
 }
