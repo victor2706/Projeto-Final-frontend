@@ -12,7 +12,7 @@ const Lista = () => {
         id: 1,
         produto: "Dell G15",
         loja: "casasbahia",
-        img: "https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/multiview_image_g15_intel_tgl_4.png",
+        img: "https://images-submarino.b2w.io/produtos/4068966338/imagens/notebook-gamer-dell-g15-i1100-m30p-15-6-fhd-11-geracao-intel-core-i5-8gb-512gb-ssd-nvidia-rtx-3050-windows-11/4068966338_4_large.jpg",
         cliente: "Marocs Miguel",
         data: "2 abril",
         conta: 1500,
@@ -23,34 +23,34 @@ const Lista = () => {
         id: 2,
         produto: "Dell G15",
         loja: "casasbahia",
-        img: "https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/multiview_image_g15_intel_tgl_4.png",
+        img: "https://images-submarino.b2w.io/produtos/4068966338/imagens/notebook-gamer-dell-g15-i1100-m30p-15-6-fhd-11-geracao-intel-core-i5-8gb-512gb-ssd-nvidia-rtx-3050-windows-11/4068966338_4_large.jpg",
         cliente: "Marocs Miguel",
         data: "2 abril",
         conta: 1500,
         metodo: "dinheiro ou delivery",
-        status: "pendente",
+        status: "Pendente",
     },
     {
         id: 3,
         produto: "Dell G15",
         loja: "casasbahia",
-        img: "https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/multiview_image_g15_intel_tgl_4.png",
+        img: "https://images-submarino.b2w.io/produtos/4068966338/imagens/notebook-gamer-dell-g15-i1100-m30p-15-6-fhd-11-geracao-intel-core-i5-8gb-512gb-ssd-nvidia-rtx-3050-windows-11/4068966338_4_large.jpg",
         cliente: "Marocs Miguel",
         data: "2 abril",
         conta: 1500,
         metodo: "dinheiro ou delivery",
-        status: "aprovado",
+        status: "Aprovado",
     },
     {
         id: 4,
         produto: "Dell G15",
         loja: "casasbahia",
-        img: "https://i.dell.com/sites/csimages/App-Merchandizing_Images/all/multiview_image_g15_intel_tgl_4.png",
+        img: "https://images-submarino.b2w.io/produtos/4068966338/imagens/notebook-gamer-dell-g15-i1100-m30p-15-6-fhd-11-geracao-intel-core-i5-8gb-512gb-ssd-nvidia-rtx-3050-windows-11/4068966338_4_large.jpg",
         cliente: "Marocs Miguel",
         data: "2 abril",
         conta: 1500,
         metodo: "dinheiro ou delivery",
-        status: "pendente",
+        status: "Pendente",
     },
 ];
   return (
@@ -72,13 +72,20 @@ const Lista = () => {
         {rows.map((row) => (
           <TableRow key={row.id}>
             <TableCell>{row.id}</TableCell>
-            <TableCell className="tableCell">{row.produto}</TableCell>
+            <TableCell className="Tabela">
+              <div className="informacoes">
+                <img src={row.img} alt="" className="image" />
+                {row.produto}
+              </div>
+            </TableCell>
             <TableCell className="tableCell">{row.loja}</TableCell>
             <TableCell className="tableCell">{row.cliente}</TableCell>
             <TableCell className="tableCell">{row.data}</TableCell>
             <TableCell className="tableCell">{row.conta}</TableCell>
             <TableCell className="tableCell">{row.metodo}</TableCell>
-            <TableCell className="tableCell">{row.status}</TableCell>
+            <TableCell className="Tabela">
+              <span className={`status ${row.status}`}>{row.status}</span>
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>

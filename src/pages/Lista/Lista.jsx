@@ -1,8 +1,17 @@
 import React from 'react'
+import MenuLat from "../../components/MenuLateral/Menulat"
+import Menunotopo from "../../components/Menunotopo/Menutopo"
+
 
 const Lista = () => {
   return (
-    <div>Lista</div>
+    <div className="Lista">
+      <MenuLat/>
+      <div className="ListaContainer">
+        <Menunotopo/>
+        datatabela
+      </div>
+    </div>
   )
 }
 

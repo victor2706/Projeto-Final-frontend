@@ -21,7 +21,7 @@ const Ferramentas = ({ type }) => {
             isMoney:false,
             link: "Usuários cadastrados",
             icon: <PersonOutlineSharpIcon className="icon" 
-            style={{color: "crimson",backgroundColor: "rgba(255, 0, 0, 0.2)",
+            style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",
             }}
           />
 
@@ -40,7 +40,7 @@ const Ferramentas = ({ type }) => {
         data = {
             title:" Qtds Lojas cadastradas",
             isMoney:false,
-            link: "quantidade de ordens",
+            link: "quantidade de Lojas",
             icon: <PriceCheckSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",}}/>
         };
         break;
@@ -48,7 +48,7 @@ const Ferramentas = ({ type }) => {
         data = {
             title:"Qtds ordens de compras",
             isMoney:false,
-            link: "see all user",
+            link: "total de ordens de compras",
             icon: <LocalShippingSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",
         }}/>
         };
@@ -74,10 +74,6 @@ const Ferramentas = ({ type }) => {
             <span className="link">{data.link}</span>
         </div>
         <div className="right">
-            <div className="porcentagem positivo">
-                <ArrowUpwardSharpIcon/>
-                {diferenca} %
-            </div>
             {data.icon}
         </div>
     </div>
