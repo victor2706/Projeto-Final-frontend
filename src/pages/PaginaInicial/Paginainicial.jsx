@@ -2,6 +2,7 @@ import "./Paginainicial.scss"
 import Menulat from "../../components/MenuLateral/Menulat";
 import Menutopo from "../../components/Menunotopo/Menutopo";
 import Ferramentas from "../../components/Ferramentas/Ferramentas";
+import Tabela from "../../components/Tabela/Tabela";
 
 const Paginainicial = () => {
   return (
@@ -16,12 +17,13 @@ const Paginainicial = () => {
             <Ferramentas type="ordens de compras"/>
             <Ferramentas type="Delivery"/>
           </div>
-          <div className="graficos">
-
+          <div className="ListaContainer">
+            <div className="ListaTitle">Tabela de clientes/Produtos</div>
+            <Tabela/>
           </div>
         </div>
     </div>
-  )
-}
+  );
+};
 
 export default Paginainicial

@@ -6,7 +6,6 @@
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     border-radius: 10px;
-    height: 100px;
 
     .left, .right{
         display: flex;
@@ -17,7 +16,7 @@
         .title{
             font-weight: bold;
             font-size: 14px;
-            color: rgb(128, 128, 128);
+            color: rgb(160, 160, 160);
         }
 
         .counter{
@@ -44,7 +43,6 @@
         .icon{
             font-style: 18px;
             padding: 5px;
-            background-color: rgba(210, 35, 35, 0.47);
             border-radius: 5px;
             align-self: flex-end;
         }
