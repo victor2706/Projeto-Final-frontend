@@ -1,4 +1,4 @@
-import React from 'react'
+import "./Lista.scss"
 import MenuLat from "../../components/MenuLateral/Menulat"
 import Menunotopo from "../../components/Menunotopo/Menutopo"
 
