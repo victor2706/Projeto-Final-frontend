@@ -18,7 +18,7 @@ const Paginainicial = () => {
             <Ferramentas type="Delivery"/>
           </div>
           <div className="ListaContainer">
-            <div className="ListaTitle">Tabela de clientes/Produtos</div>
+            <div className="ListaTitle">Tabela de Produtos</div>
             <Tabela/>
           </div>
         </div>
