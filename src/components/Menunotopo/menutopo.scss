@@ -16,7 +16,7 @@
         .procurar{
             display: flex;
             align-items: center;
-            border: 0.5px solid lightgreen;
+            border: 0.5px solid rgb(0, 0, 0);
             padding: 3px;
             
             input{
@@ -27,23 +27,7 @@
                 &::placeholder{
                     font-size: 12px;
                 }
-            }
-            
+            }  
         }
-        .items{
-            display: flex;
-            align-items: center;
-
-            .item{
-                display: flex;
-                align-items: center;
-                margin-right: 20px;
-
-                icon{
-                    font-style: 20px;
-                }
-            }
-        }
-
     }
 }

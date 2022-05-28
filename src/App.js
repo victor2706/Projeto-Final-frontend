@@ -23,6 +23,11 @@ function App() {
               <Route path=":produtoId" element={<Mais/>} />
               <Route path="novo" element={<Novo/>}/>
             </Route>
+            <Route path="Lojas">
+            <Route index element={<Lista/>} />
+              <Route path=":lojaId" element={<Mais/>} />
+              <Route path="novo" element={<Novo/>}/>
+            </Route>
             </Route>
         </Routes>
       </BrowserRouter>

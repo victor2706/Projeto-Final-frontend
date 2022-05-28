@@ -1,6 +1,7 @@
 import "./Lista.scss"
 import MenuLat from "../../components/MenuLateral/Menulat"
 import Menunotopo from "../../components/Menunotopo/Menutopo"
+import Tabeladados from "../../components/tabeladedados/Tabeladados"
 
 
 const Lista = () => {
@@ -9,7 +10,7 @@ const Lista = () => {
       <MenuLat/>
       <div className="ListaContainer">
         <Menunotopo/>
-        datatabela
+        <Tabeladados/>
       </div>
     </div>
   )

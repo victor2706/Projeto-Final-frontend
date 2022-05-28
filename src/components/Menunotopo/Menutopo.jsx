@@ -12,18 +12,6 @@ const Menutopo = () => {
           <input type="text" placeholder="procurando..."/>
           <SearchSharpIcon/>
         </div>
-        <div className="items">
-          <div className="item">
-            <LanguageSharpIcon className="icon"/>
-            Inglês
-          </div>
-          <div className="item">
-            <DarkModeSharpIcon className="icon"/>
-          </div>
-          <div className="item">
-            <FormatListBulletedSharpIcon className="icon"/>
-          </div>
-        </div>
       </div>
     </div>
   )
