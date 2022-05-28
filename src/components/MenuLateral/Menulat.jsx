@@ -7,13 +7,18 @@ import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
 import ExitToAppSharpIcon from '@mui/icons-material/ExitToAppSharp';
 import StoreMallDirectorySharpIcon from '@mui/icons-material/StoreMallDirectorySharp';
 import "./menulat.scss"
-
+import { Link } from 'react-router-dom';
+import { DarkModeContext } from '../../contexto/negromodocontexto';
+import { useContext } from 'react';
 
 const MenuLat = () => {
+  const { dispatch } = useContext (DarkModeContext);
   return (
     <div className='menulat'>
       <div className="top">
+        <Link to="/" style={{textDecoration: "none"}}>
         <span className="logo">NEW DASHBOARD</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -23,21 +28,30 @@ const MenuLat = () => {
           <span>Dashboard</span>
           </li>
           <p className='alterar'>Lista</p>
+          <Link to="/usuarios" style={{textDecoration: "none"}}>
           <li><PeopleAltIcon className='icon'/>
           <span>Usuários</span>
           </li>
+          </Link>
           <li><ProductionQuantityLimitsSharpIcon className='icon'/>
-          <span>Produtos</span>
+          <span>Cadastro de Produtos</span>
+          <Link to="/produtos" style={{textDecoration: "none"}}></Link>
           </li>
+          <Link to="/Lojas" style={{textDecoration: "none"}}>
           <li><StoreMallDirectorySharpIcon className='icon'/>
-          <span>Lojas</span>
+          <span>Cadastro de Lojas</span>
           </li>
+          </Link>
+          <Link to="/fornecedor" style={{textDecoration: "none"}}>
           <li><PriceCheckSharpIcon className='icon'/>
-          <span>Ordens de Compra</span>
+          <span>Cadastro de Fornecedores</span>
           </li>
+          </Link>
+          <Link to="/Envios" style={{textDecoration: "none"}}>
           <li><LocalShippingSharpIcon className='icon'/>
-          <span>Delivery</span>
+          <span>Cadastro de Envios</span>
           </li>
+          </Link>
           <p className='alterar'>Usuário</p>
           <li><AccountCircleSharpIcon className='icon'/>
           <span>Perfil</span>
@@ -48,8 +62,8 @@ const MenuLat = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className='opcaodecores'></div>
-        <div className='opcaodecores'></div>
+        <div className='opcaodecores' onClick={()=> dispatch({type:"LIGHT"})}></div>
+        <div className='opcaodecores' onClick={()=> dispatch({type:"DARK"})}></div>
       </div>
     </div>
   )

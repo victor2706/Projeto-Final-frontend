@@ -17,7 +17,7 @@ const Ferramentas = ({ type }) => {
     switch(type){
         case "Usuários":
         data = {
-            title:" Qtds Usuários",
+            title:"Usuários",
             isMoney:false,
             link: "Usuários cadastrados",
             icon: <PersonOutlineSharpIcon className="icon" 
@@ -29,7 +29,7 @@ const Ferramentas = ({ type }) => {
         break;
         case "Produtos":
         data = {
-            title:"Qtds Produtos",
+            title:"Produtos",
             isMoney:false,
             link: "produtos cadastrados",
             icon: <ProductionQuantityLimitsSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",
@@ -38,7 +38,7 @@ const Ferramentas = ({ type }) => {
         break;
         case "Lojas Ordens de compra":
         data = {
-            title:" Qtds Lojas cadastradas",
+            title:"Lojas",
             isMoney:false,
             link: "quantidade de Lojas",
             icon: <PriceCheckSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",}}/>
@@ -46,7 +46,7 @@ const Ferramentas = ({ type }) => {
         break;
         case "ordens de compras":
         data = {
-            title:"Qtds ordens de compras",
+            title:"Fornecedores",
             isMoney:false,
             link: "total de ordens de compras",
             icon: <LocalShippingSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",
@@ -55,7 +55,7 @@ const Ferramentas = ({ type }) => {
         break;
         case "Delivery":
         data={
-            title:"Qtds Delivery",
+            title:"Envios",
             isMoney:false,
             link: "total de delivery",
             icon: <AccountCircleSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",
