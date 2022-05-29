@@ -16,27 +16,28 @@ const MenuLat = () => {
   return (
     <div className='menulat'>
       <div className="top">
-        <Link to="/" style={{textDecoration: "none"}}>
         <span className="logo">NEW DASHBOARD</span>
-        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className='alterar'>Painel Principal</p>
+          <Link to="/" style={{textDecoration: "none"}}>
           <li><GridViewIcon className='icon'/>
           <span>Dashboard</span>
           </li>
+          </Link>
           <p className='alterar'>Lista</p>
           <Link to="/usuarios" style={{textDecoration: "none"}}>
           <li><PeopleAltIcon className='icon'/>
           <span>Usuários</span>
           </li>
           </Link>
+          <Link to="/produtos" style={{textDecoration: "none"}}>
           <li><ProductionQuantityLimitsSharpIcon className='icon'/>
           <span>Cadastro de Produtos</span>
-          <Link to="/produtos" style={{textDecoration: "none"}}></Link>
           </li>
+          </Link>
           <Link to="/Lojas" style={{textDecoration: "none"}}>
           <li><StoreMallDirectorySharpIcon className='icon'/>
           <span>Cadastro de Lojas</span>
