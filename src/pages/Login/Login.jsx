@@ -1,7 +1,9 @@
 import "./Login.scss"
-import { useState } from "react"
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useContext, useState } from "react"
+import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../../firebase"
+import {useNavigate} from "react-router-dom";
+import { AuthContext } from "../../contexto/AuthContexto";
 
 const Login = () => {
 
@@ -9,13 +11,17 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navitage = useNavigate()
+  
+  const{} = useContext(AuthContext)
+
   const haldleLogin = (e)=>{
     e.preventDefault();
 
-    createUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user)
+        navitage("/")
       })
       .catch((error) => {
         setErrado(true)
@@ -25,8 +31,8 @@ return (
     <div className="Login">
       <form onSubmit={haldleLogin}>
         <p>DashBoard - VICTOR</p>
-        <input type="email" placeholder='email' onChange={e=>setEmail(e.target.value)}/>
-        <input type="password" placeholder="password" onChange={e=>setPassword(e.target.value)}/>
+        <input type="EMAIL" placeholder="EMAIL" onChange={e=>setEmail(e.target.value)}/>
+        <input type="PASSWORD" placeholder="PASSWORD" onChange={e=>setPassword(e.target.value)}/>
         <button type="submit">Login</button>
         {error && <span>E-MAIL OU SENHA INCORRETOS</span>}
       </form>

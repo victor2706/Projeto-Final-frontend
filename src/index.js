@@ -2,11 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { DarkModeContextProvider } from "./contexto/negromodocontexto";
+import {AuthContextProvider} from "./contexto/AuthContexto"
 
 ReactDOM.render(
   <React.StrictMode>
     <DarkModeContextProvider>
-      <App />
+      <AuthContextProvider>
+        <App />
+      </AuthContextProvider>
     </DarkModeContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
