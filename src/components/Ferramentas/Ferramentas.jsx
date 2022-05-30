@@ -31,33 +31,33 @@ const Ferramentas = ({ type }) => {
         data = {
             title:"Produtos",
             isMoney:false,
-            link: "produtos cadastrados",
+            link: "Produtos cadastrados",
             icon: <ProductionQuantityLimitsSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",
         }}/>
         };
         break;
-        case "Lojas Ordens de compra":
+        case "Lojas":
         data = {
             title:"Lojas",
             isMoney:false,
-            link: "quantidade de Lojas",
+            link: "Quantidade de Lojas",
             icon: <PriceCheckSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",}}/>
         };
         break;
-        case "ordens de compras":
+        case "Fornecedores":
         data = {
             title:"Fornecedores",
             isMoney:false,
-            link: "total de ordens de compras",
+            link: "Total de Fornecedores",
             icon: <LocalShippingSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",
         }}/>
         };
         break;
-        case "Delivery":
+        case "Envios":
         data={
             title:"Envios",
             isMoney:false,
-            link: "total de delivery",
+            link: "Total de Envios",
             icon: <AccountCircleSharpIcon className="icon" style={{color: "goldenrod",backgroundColor: "rgba(218, 165, 32, 0.2)",
         }}/>
         };

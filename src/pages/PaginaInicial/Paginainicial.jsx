@@ -13,9 +13,9 @@ const Paginainicial = () => {
           <div className="ferramentas">
             <Ferramentas type="Usuários"/>
             <Ferramentas type="Produtos"/>
-            <Ferramentas type="Lojas Ordens de compra"/>
-            <Ferramentas type="ordens de compras"/>
-            <Ferramentas type="Delivery"/>
+            <Ferramentas type="Lojas"/>
+            <Ferramentas type="Fornecedores"/>
+            <Ferramentas type="Envios"/>
           </div>
           <div className="ListaContainer">
             <div className="ListaTitle">Tabela de Produtos</div>
