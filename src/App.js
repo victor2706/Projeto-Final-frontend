@@ -8,15 +8,20 @@ import { EnviosInputs, FornecedorInputs, LojasInputs, ProdutosInputs, usuariosIn
 import "./ModoNot/negro.scss"
 import { useContext, useState } from "react";
 import { DarkModeContext } from "./contexto/negromodocontexto";
+import { AuthContext } from "./contexto/AuthContexto";
 
 function App() {
 
   const {darkMode} = useContext (DarkModeContext);
-  const currentUser = true;
+
+  const{currentUser} = useContext(AuthContext)
 
   const RequireAuth = ({children}) => {
     return currentUser ? (children) : <Navigate to="/login"/>
   };
+
+  console.log(currentUser)
+
   return (
     <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>

@@ -13,7 +13,7 @@ const Login = () => {
 
   const navitage = useNavigate()
   
-  const{} = useContext(AuthContext)
+  const{dispatch} = useContext(AuthContext)
 
   const haldleLogin = (e)=>{
     e.preventDefault();
@@ -21,6 +21,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        dispatch({type:"LOGIN", payload:user})
         navitage("/")
       })
       .catch((error) => {
