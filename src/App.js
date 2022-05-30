@@ -25,43 +25,68 @@ function App() {
           <Route path="Login" element={<Login />}/>
             <Route index element={<RequireAuth><Paginainicial/></RequireAuth>} />
             <Route path="usuarios">
-              <Route index element={<Lista/>} />
-              <Route path=":usuarioId" element={<Mais/>} />
+              <Route index element={<RequireAuth><Lista/></RequireAuth>} />
+              <Route path=":usuarioId" element={
+              <RequireAuth>
+                <Mais/>
+                </RequireAuth>
+              } />
               <Route
                 path="Novo"
-                element={<New inputs={usuariosInputs} title="Adicione um novo Usuário..." />}
+                element={<RequireAuth><New inputs={usuariosInputs} title="Adicione um novo Usuário..." /></RequireAuth>}
               />
             </Route>
             <Route path="produtos">
-            <Route index element={<Lista/>} />
-              <Route path=":produtoId" element={<Mais/>} />
+            <Route index element={<RequireAuth><Lista/></RequireAuth>} />
+              <Route path=":produtoId" element={<RequireAuth><Mais/></RequireAuth>} />
               <Route
                 path="Novo"
-                element={<New inputs={ProdutosInputs} title="Adicine um novo produto..." />}
+                element={<RequireAuth><New inputs={ProdutosInputs} title="Adicine um novo produto..." /></RequireAuth>}
               />
             </Route>
             <Route path="Lojas">
-            <Route index element={<Lista/>} />
-              <Route path=":lojaId" element={<Mais/>} />
+            <Route index element={<RequireAuth><Lista/></RequireAuth>} />
+              <Route path=":lojaId" element={<RequireAuth><Mais/></RequireAuth>} />
               <Route
                 path="Novo"
-                element={<New inputs={LojasInputs} title="Adicione uma nova Loja..." />}
+                element={
+                <RequireAuth>
+                  <New inputs={LojasInputs} title="Adicione uma nova Loja..." />
+                  </RequireAuth>
+                  }
               />
             </Route>
             <Route path="fornecedor">
-            <Route index element={<Lista/>} />
-              <Route path=":fornecedorId" element={<Mais/>} />
+            <Route index element={
+            <RequireAuth>
+              <Lista/>
+              </RequireAuth>} 
+              />
+              <Route path=":fornecedorId" element={
+              <RequireAuth>
+                <Mais/>
+                </RequireAuth>
+              } 
+              />
               <Route
                 path="Novo"
-                element={<New inputs={FornecedorInputs} title="Adicione os fornecedores do Produto...." />}
+                element={
+                <RequireAuth>
+                  <New inputs={FornecedorInputs} title="Adicione os fornecedores do Produto...." />
+                  </RequireAuth>
+                  }
               />
             </Route>
             <Route path="Envios">
-            <Route index element={<Lista/>} />
-              <Route path=":EnviosId" element={<Mais/>} />
+            <Route index element={<RequireAuth><Lista/></RequireAuth>} />
+              <Route path=":EnviosId" element={<RequireAuth><Mais/></RequireAuth>} />
               <Route
                 path="Novo"
-                element={<New inputs={EnviosInputs} title="Adicione a data de envio e o valor do frete..." />}
+                element={
+                <RequireAuth>
+                  <New inputs={EnviosInputs} title="Adicione a data de envio e o valor do frete..." />
+                  </RequireAuth>
+                  }
               />
             </Route>
             </Route>
