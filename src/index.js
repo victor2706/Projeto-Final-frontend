@@ -1,8 +1,9 @@
+
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { AuthContextProvider } from "./contexto/AuthContexto";
 import { DarkModeContextProvider } from "./contexto/negromodocontexto";
-import {AuthContextProvider} from "./contexto/AuthContexto"
 
 ReactDOM.render(
   <React.StrictMode>
